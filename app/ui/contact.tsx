@@ -1,33 +1,19 @@
 'use client'
 
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-
+import { motion } from "framer-motion";
+import React from "react";
 export default function Contact() {
-  const rightControls = useAnimation();
-
-  const { ref, inView } = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      // Element comes into view - animate to original position
-      rightControls.start({ x: 0 }); // Comes in from the right
-    } else {
-      // Element goes out of view - animate back to starting position
-      rightControls.start({ x: "-100vw" }); // Moves back out to the right
-    }
-  }, [ inView, rightControls]);
+  
 
   return (
-    <div ref={ref} className="grid grid-cols-2 h-500 w-full  mt-10">
+    <div  className="grid grid-cols-2 h-500 w-full  mt-10">
       <div></div>
       <motion.div
-        initial={{ x: "100vw" }}
-        animate={rightControls} // Use the same leftControls for synchronized animation
-        transition={{ type: "spring", stiffness: 30 }}
-        className="m-4 p-8 bg-[#F0F8FF]text-white"
-      >
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="h-screen"
+    >
         <div className="mt-10">
           <h1 className="text-5xl font-bold">Leave a Message</h1>
           <form className="mt-10 ">

@@ -9,9 +9,9 @@ import Hero from "../ui/hero";
 export default function page() {
   const projectDetails = [
     {
-      title: "Gyapu Marketplace",
-      desc: "E-commerce application",
-      imageUrl: "/gyapuapp.png",
+      title: "Schoolworkspro",
+      desc: "E-Learning Platform",
+      imageUrl: "/schoolworksproapp.png",
     },
   ];
   const projectDetailsSecond = [
@@ -55,6 +55,7 @@ export default function page() {
         <Card topGap={32} projectDetails={thirdProject} />
       </div>
       <Details />
+      <h1 className="text-3xl font-bold ">Featured Projects</h1>
       <MobileApp
         projectDetails={projectDetails}
         projectDetailsSecond={projectDetailsSecond}

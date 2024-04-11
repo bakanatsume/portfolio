@@ -46,7 +46,7 @@ export default function MobileApp({
           {projectDetails.map((values) => (
             <div className="grid grid-rows-1 mt-10">
               <div
-                className="flex  h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                className=" h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
                 style={{
                   backgroundImage: `url(${values.imageUrl})`,
                   // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
@@ -56,7 +56,7 @@ export default function MobileApp({
                   backgroundRepeat: "no-repeat", // Prevents the image from repeating
                 }}
               >
-                <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-100 transition ease-in-out delay-0 hover:scale-100 duration-300">
+                <p className=" font-bold text-center text-2xl">
                   {values.title}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function MobileApp({
             {projectDetailsSecond.map((values) => (
               <div className="grid grid-rows-1 mt-10">
                 <div
-                  className="flex  h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                  className="h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
                   style={{
                     backgroundImage: `url(${values.imageUrl})`,
                     // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
@@ -84,7 +84,7 @@ export default function MobileApp({
                     backgroundRepeat: "no-repeat", // Prevents the image from repeating
                   }}
                 >
-                  <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-100 transition ease-in-out delay-0 hover:scale-100 duration-300">
+                  <p className=" font-bold text-center text-2xl">
                     {values.title}
                   </p>
                 </div>

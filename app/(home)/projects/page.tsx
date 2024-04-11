@@ -45,20 +45,10 @@ export default function page() {
   return (
     <div className="container mx-auto">
       <Hero />
-      {pathname === "/projects" ? (
-        <MobileApp
-          projectDetails={projectDetailsFirst}
-          projectDetailsSecond={projectDetailsSecond}
-        />
-      ) : (
-        <div>
-          <h1 className="text-3xl font-bold ">Mobile Application</h1>
-          <MobileApp
-            projectDetails={projectDetailsFirst}
-            projectDetailsSecond={projectDetailsSecond}
-          />
-        </div>
-      )}
+      <MobileApp
+        projectDetails={projectDetailsFirst}
+        projectDetailsSecond={projectDetailsSecond}
+      />
     </div>
   );
 }

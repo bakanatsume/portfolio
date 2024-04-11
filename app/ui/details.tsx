@@ -1,37 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Details() {
-  const leftControls = useAnimation();
-  const rightControls = useAnimation();
-
-  const { ref, inView } = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      // Element comes into view - animate to original position
-      leftControls.start({ x: 0 }); // Comes in from the left
-      rightControls.start({ x: 0 }); // Comes in from the right
-    } else {
-      // Element goes out of view - animate back to starting position
-      leftControls.start({ x: "-100vw" }); // Moves back out to the left
-      rightControls.start({ x: "100vw" }); // Moves back out to the right
-    }
-  }, [leftControls, inView, rightControls]);
-
   return (
     <div className="h-screen mt-20">
-      <div ref={ref} className="grid grid-cols-2 justify-center items-center mb-20">
+      <div className="grid grid-cols-2 justify-center items-center mb-20">
         <div>
           <motion.div
-            initial={{ x: "-100vw" }}
-            animate={leftControls}
-            transition={{ type: "spring", stiffness: 30 }}
-            className="m-4 p-8 text-white"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="h-screen"
           >
             <div className=" items-center justify-center">
               <Image
@@ -46,10 +28,10 @@ export default function Details() {
 
         <div className="">
           <motion.div
-            initial={{ x: "100vw" }}
-            animate={leftControls} // Use the same leftControls for synchronized animation
-            transition={{ type: "spring", stiffness: 30 }}
-            className="m-4 p-8 bg-[#F0F8FF]text-white"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="h-screen"
           >
             <h1 className="ml-2 text-4xl font-bold">I am, </h1>
             <p className="ml-2 text-xl">

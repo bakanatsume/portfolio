@@ -20,6 +20,7 @@ export default function Hero() {
       <div>
         <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
           <h1 className="text-6xl font-bold">Projects</h1>
+          <h1 className="text-xl font-semi">Browse through my company projects</h1>
           {/* Project details here */}
         </div>
       </div>
