@@ -9,6 +9,7 @@ import Hero from "../ui/hero";
 export default function page() {
   const projectDetails = [
     {
+      id:1,
       title: "Schoolworkspro",
       desc: "E-Learning Platform",
       imageUrl: "/schoolworksproapp.png",
@@ -16,6 +17,7 @@ export default function page() {
   ];
   const projectDetailsSecond = [
     {
+      id:1,
       title: "Schoolworkspro",
       desc: "E-Learning Platform designed for schools,college and universities",
       imageUrl: "/schoolworkspro.png",

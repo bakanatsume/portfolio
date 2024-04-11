@@ -10,7 +10,6 @@ const links = [
   { name: "Experience", href: "/experience" },
   {
     name: "Projects",
-    // href: '/events',
     href: "/projects",
   },
   { name: "Contact", href: "/contact" },
@@ -21,14 +20,14 @@ export default function Navbar() {
   return (
 
     <>
-      <div className="w-2/6 right-16 border border-2 rounded-lg fixed top-10 bg-slate-100 z-10">
+      <div className="w-2/6 right-16 border border-2 rounded-lg fixed top-10 bg-gray-100 z-10">
         <div className="grid grid-cols-4 border border-2 rounded-lg h-16 shadow-lg justify-center place-items-center font-bold">
           {links.map((navLink) => {
             return (
               <Link
                 key={navLink.name}
                 href={navLink.href}
-                className={clsx("", {
+                className={clsx("cursor-none", {
                   "flex justify-center items-center border border-gray-300 shadow-lg border-2 rounded-lg p-4 w-30 h-10":
                     pathname === navLink.href,
                 })}

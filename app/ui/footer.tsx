@@ -41,7 +41,7 @@ export default function Footer() {
 
       </div>
     </div>
-    <h1 className="font-bold text-5xl text-slate-300">Design Develop And Deploy</h1>
+    <h1 className="font-bold text-5xl text-gray-300">Design Develop And Deploy</h1>
 
     </>
   );

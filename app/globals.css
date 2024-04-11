@@ -3,5 +3,26 @@
 @tailwind utilities;
 
 body {
-  background-color: #F0F8FF; /* Replace with your desired gray color */
+  background: #daddde;
+  cursor: none;
 }
+
+.cursor{
+  width: 6px;
+  height: 6px;
+  border-radius:50%;
+  position: fixed;
+  z-index:999;
+  background-color: black;
+}
+
+.follower-cursor{
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  position: fixed;
+  z-index: 999;
+  border-radius: 50%;
+}
+

@@ -24,10 +24,10 @@ export default function Card({
       className={clsx(
         `h-screen border border-2 rounded-2xl shadow-lg sticky top-0 `,
         {
-          "bg-gradient-to-r from-cyan-500 to-blue-500": topGap === 14,
-          "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":
+          "bg-gradient-to-b from-white to-gray-500": topGap === 14,
+          "bg-gradient-to-b from-white to-gray-500 ":
             topGap === 24,
-          "bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%":
+          " bg-gradient-to-b from-white to-gray-500 ":
             topGap === 32,
         }
       )}
@@ -40,7 +40,7 @@ export default function Card({
           <div>
             <p className="mt-10 text-justify">{projectDetails.description}</p>
           </div>
-          <div className="flex origin-top-left rotate-12 ">
+          <div >
             <Image
               src={
                 projectDetails.imageUrl
@@ -50,7 +50,7 @@ export default function Card({
               alt="project screen"
               width={500}
               height={100}
-              className=""
+              className="mx-auto"
             />
           </div>
         </div>
