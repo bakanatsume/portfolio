@@ -22,7 +22,7 @@ export default function Card({
   return (
     <div
       className={clsx(
-        `h-screen border border-2 rounded-2xl shadow-lg sticky top-0 `,
+        `h-1/2 border border-2 rounded-2xl shadow-lg sticky top-0 `,
         {
           "bg-gradient-to-b from-white to-gray-500": topGap === 14,
           "bg-gradient-to-b from-white to-gray-500 ":

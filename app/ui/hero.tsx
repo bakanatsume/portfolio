@@ -4,11 +4,12 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import splitusingregex from "./splitusingregex";
 import { motion } from "framer-motion";
+import RotatingText from "./rotatingtext";
 
 export default function Hero() {
   const designanddeploy = "Design, Develop and Deploy";
 
-  const projects = "Browse through my company projects";
+  const projects = "Scroll Down to Browse projects";
 
   const designanddeployregex = splitusingregex(designanddeploy);
   const projectsregex = splitusingregex(projects);
@@ -66,7 +67,7 @@ export default function Hero() {
     );
   } else {
     return (
-      <div>
+      <div className="grid grid-cols-2">
         <div className="flex h-screen justify-center items-start flex-col space-y-2">
           <h1 className="text-xl">Hi, I am</h1>
           <h1 className="text-6xl font-bold">Bipash Chhantyal</h1>
@@ -95,6 +96,10 @@ export default function Hero() {
               Contact
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center">
+
+        <RotatingText/>
         </div>
       </div>
     );

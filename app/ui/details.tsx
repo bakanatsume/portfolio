@@ -51,7 +51,7 @@ export default function Details() {
             transition={{ duration: 1 }}
             className="h-screen"
           >
-            <div className="relative flex items-center justify-center h-screen">
+            <div className="relative flex items-center justify-center h-[400]">
               <div
                 id="lottie-animation"
                 className="absolute top-0 left-0 h-full w-full z-10"
