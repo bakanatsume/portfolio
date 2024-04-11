@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 
+
+
 export default function Details() {
   
   const animationContainer = useRef(null);

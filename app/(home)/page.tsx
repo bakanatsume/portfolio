@@ -5,6 +5,12 @@ import Details from "../ui/details";
 import MobileApp from "../ui/mobileapp";
 import Contact from "../ui/contact";
 import Hero from "../ui/hero";
+import dynamic from "next/dynamic";
+
+
+const DynamicHeader = dynamic(() => import('../ui/details'), {
+  ssr: false,
+}) 
 
 export default function page() {
   const projectDetails = [
@@ -56,7 +62,7 @@ export default function page() {
         <Card topGap={24} projectDetails={secondProject} />
         <Card topGap={32} projectDetails={thirdProject} />
       </div>
-      <Details />
+      <DynamicHeader />
       <h1 className="text-3xl font-bold ">Featured Projects</h1>
       <MobileApp
         projectDetails={projectDetails}
