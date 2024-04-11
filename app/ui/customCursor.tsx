@@ -3,7 +3,7 @@
 import gsap from 'gsap'
 import React, { useEffect, useRef } from 'react'
 
-export default function customCursor() {
+export default function CustomCursor() {
     const cursorRef = useRef<HTMLDivElement>(null)
     const followerRef =  useRef<HTMLDivElement>(null)
 

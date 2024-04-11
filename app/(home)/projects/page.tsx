@@ -2,11 +2,9 @@
 
 import Hero from "@/app/ui/hero";
 import MobileApp from "@/app/ui/mobileapp";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function page() {
-  const pathname = usePathname();
 
   const projectDetailsFirst = [
     {
