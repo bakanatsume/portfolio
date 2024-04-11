@@ -2,9 +2,23 @@
 
 import { usePathname } from "next/navigation";
 import React from "react";
+import splitusingregex from "./splitusingregex";
+import { motion } from "framer-motion";
 
 export default function Hero() {
+  const designanddeploy = "Design, Develop and Deploy";
+
+  const projects = "Browse through my company projects";
+
+  const designanddeployregex = splitusingregex(designanddeploy);
+  const projectsregex = splitusingregex(projects);
+
   const path = usePathname();
+
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  };
 
   if (path === "/experience") {
     return (
@@ -20,7 +34,22 @@ export default function Hero() {
       <div>
         <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
           <h1 className="text-6xl font-bold">Projects</h1>
-          <h1 className="text-xl font-semi">Browse through my company projects</h1>
+          <motion.h1
+            initial="hidden"
+            whileInView="reveal"
+            transition={{ staggerChildren: 0.1 }}
+            className="text-xl font-semibold"
+          >
+            {projectsregex.map((char) => (
+              <motion.span
+                key={char}
+                transition={{ duration: 0.5 }}
+                variants={charVariants}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
           {/* Project details here */}
         </div>
       </div>
@@ -41,7 +70,22 @@ export default function Hero() {
         <div className="flex h-screen justify-center items-start flex-col space-y-2">
           <h1 className="text-xl">Hi, I am</h1>
           <h1 className="text-6xl font-bold">Bipash Chhantyal</h1>
-          <h1 className="text-4xl font-semibold">Design, Develop and Deploy</h1>
+          <motion.h1
+            initial="hidden"
+            whileInView="reveal"
+            transition={{ staggerChildren: 0.1 }}
+            className="text-4xl font-semibold"
+          >
+            {designanddeployregex.map((char) => (
+              <motion.span
+                key={char}
+                transition={{ duration: 0.5 }}
+                variants={charVariants}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
           <div className="h-10"></div>
           <div className="flex space-x-4">
             <div className="flex border border-4 rounded-3xl w-36 h-16 justify-center items-center shadow-xl font-bold text-xl">

@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export interface ProjectDetailsSchema {
-  id?: string;
+  id?: number;
   title?: string;
   desc?: string;
   imageUrl?: string;

@@ -3,8 +3,44 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import dynamic from "next/dynamic";
 
 export default function Details() {
+  
+  const animationContainer = useRef(null);
+  useEffect(() => {
+    if (animationContainer.current) {
+      // Attempt to load the animation
+      try {
+        const animationInstance = lottie.loadAnimation({
+          container: animationContainer.current, 
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: "/blob.json", 
+          rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+          },
+        });
+
+        const handleResize = () => {
+          animationInstance.resize();
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+          window.removeEventListener("resize", handleResize);
+          animationInstance.destroy(); // Proper cleanup
+        };
+      } catch (error) {
+        console.error("Error loading Lottie animation:", error);
+      }
+    }
+  }, []);
+
   return (
     <div className="h-screen mt-20">
       <div className="grid grid-cols-2 justify-center items-center mb-20">
@@ -15,12 +51,18 @@ export default function Details() {
             transition={{ duration: 1 }}
             className="h-screen"
           >
-            <div className=" items-center justify-center">
+            <div className="relative flex items-center justify-center h-screen">
+              <div
+                id="lottie-animation"
+                className="absolute top-0 left-0 h-full w-full z-10"
+                ref={animationContainer}
+              ></div>
               <Image
                 src="/profile.png"
                 alt="project screen"
-                height={400}
                 width={500}
+                height={400}
+                className="z-20 relative"
               />
             </div>
           </motion.div>
@@ -179,3 +221,4 @@ export default function Details() {
     </div>
   );
 }
+

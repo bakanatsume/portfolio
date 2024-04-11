@@ -43,7 +43,7 @@ export default function page() {
     title: "Digi School Global",
     summary: "Join Courses and Stat Learing",
     description:
-      "DigischoolGlobal redefines online learning with a diverse course selection catering to all levels and interests. The platform offers seamless navigation, enriched with engaging multimedia content and interactive assignments. Upon completion, students receive globally recognized certifications, enhancing their career prospects. As a frontend developer to deisgn and deploy product by implementing reactjs, tailwind css, axios and bootstrap.  ",
+      "DigischoolGlobal redefines online learning with a diverse course selection catering to all levels and interests. The platform offers seamless navigation, enriched with engaging multimedia content and interactive assignments. Upon completion, students receive globally recognized certifications, enhancing their career prospects.",
     imageUrl: "/Digischoolglobal.png",
     url: "/",
   };
