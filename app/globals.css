@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 body {
-  background: #daddde;
+  background-image: url('../public/test.gif');
+  /* background: #daddde; */
   cursor: none;
+  background-size: cover;  /* Cover the entire area of the body */
+  background-position: center;  /* Center the background image */
+  background-repeat: no-repeat;  /* Do not repeat the image */
 }
 
 .cursor{
