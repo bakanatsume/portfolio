@@ -9,7 +9,7 @@ export default function Hero() {
   if (path === "/experience") {
     return (
       <div>
-        <div className="flex h-screen justify-center items-start flex-col space-y-2">
+        <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
           <h1 className="text-6xl font-bold">Experience</h1>
         </div>
       </div>
@@ -18,7 +18,7 @@ export default function Hero() {
     // Placeholder for projects content
     return (
       <div>
-        <div className="flex h-screen justify-center items-start flex-col space-y-2">
+        <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
           <h1 className="text-6xl font-bold">Projects</h1>
           {/* Project details here */}
         </div>
@@ -28,7 +28,7 @@ export default function Hero() {
     // Placeholder for projects content
     return (
       <div>
-        <div className="flex h-screen justify-center items-start flex-col space-y-2">
+        <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
           <h1 className="text-6xl font-bold">Contact</h1>
           {/* Project details here */}
         </div>

@@ -40,7 +40,7 @@ export default function Card({
           <div>
             <p className="mt-10 text-justify">{projectDetails.description}</p>
           </div>
-          <div className="flex">
+          <div className="flex origin-top-left rotate-12 ">
             <Image
               src={
                 projectDetails.imageUrl

@@ -15,7 +15,7 @@ export default function Contact() {
       rightControls.start({ x: 0 }); // Comes in from the right
     } else {
       // Element goes out of view - animate back to starting position
-      rightControls.start({ x: "100vw" }); // Moves back out to the right
+      rightControls.start({ x: "-100vw" }); // Moves back out to the right
     }
   }, [ inView, rightControls]);
 

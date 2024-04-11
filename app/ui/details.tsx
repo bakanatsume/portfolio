@@ -47,7 +47,7 @@ export default function Details() {
         <div className="">
           <motion.div
             initial={{ x: "100vw" }}
-            animate={rightControls} // Use the same leftControls for synchronized animation
+            animate={leftControls} // Use the same leftControls for synchronized animation
             transition={{ type: "spring", stiffness: 30 }}
             className="m-4 p-8 bg-[#F0F8FF]text-white"
           >

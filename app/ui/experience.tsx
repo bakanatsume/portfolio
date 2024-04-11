@@ -21,7 +21,7 @@ export default function Experience() {
           </h1>
         </div>
         <h1 className="font-semi text-xl mt-2">
-          Cities Troves Investmentm Greater London UK
+          Cities Troves Investment Greater London UK
         </h1>
         <hr className="border border-2 mt-4"></hr>
       </div>
@@ -29,23 +29,35 @@ export default function Experience() {
         <div>
           <h1 className="flex space justify-between ">
             <span className="font-bold text-3xl">React Developer</span>{" "}
-            <span className="font-semi text-xl">Jan 2024-Present</span>
+            <span className="font-semi text-xl">Jan 2021-Jan 2023</span>
           </h1>
         </div>
         <h1 className="font-semi text-xl mt-2">
-          Cities Troves Investmentm Greater London UK
+          Digitechnology Nepal Pvt Ltd, Dillibazar Nepal
         </h1>
         <hr className="border border-2 mt-4"></hr>
       </div>
       <div className="mt-12 w-2/3">
         <div>
           <h1 className="flex space justify-between ">
-            <span className="font-bold text-3xl">React Developer</span>{" "}
-            <span className="font-semi text-xl">Jan 2024-Present</span>
+            <span className="font-bold text-3xl">IOT Teaching Assistat</span>{" "}
+            <span className="font-semi text-xl">May 2020-Jan 2023</span>
           </h1>
         </div>
         <h1 className="font-semi text-xl mt-2">
-          Cities Troves Investmentm Greater London UK
+          Softwarca College of It & E-commerce, Dillibazar Nepal
+        </h1>
+        <hr className="border border-2 mt-4"></hr>
+      </div>
+      <div className="mt-12 w-2/3">
+        <div>
+          <h1 className="flex space justify-between ">
+            <span className="font-bold text-3xl">Subsidy Manager</span>{" "}
+            <span className="font-semi text-xl">Jan 2016-Jan 2019</span>
+          </h1>
+        </div>
+        <h1 className="font-semi text-xl mt-2">
+          Sunforce Solar and Construction Company Pvt Ltd.
         </h1>
         <hr className="border border-2 mt-4"></hr>
       </div>

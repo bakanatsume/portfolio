@@ -1,11 +1,22 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default function MobileApp() {
+export interface ProjectDetailsSchema {
+  title?: string;
+  desc?: string;
+  imageUrl?: string;
+}
+
+export default function MobileApp({
+  projectDetails,
+  projectDetailsSecond,
+}: {
+  projectDetails: ProjectDetailsSchema[];
+  projectDetailsSecond: ProjectDetailsSchema[];
+}) {
   const leftControls = useAnimation();
   const rightControls = useAnimation();
 
@@ -25,42 +36,60 @@ export default function MobileApp() {
 
   return (
     <div ref={ref} className="w-full mt-20">
-      <h1 className="text-3xl font-bold ">Mobile Application</h1>
       <div className="grid grid-cols-2">
         <motion.div
           initial={{ x: "-100vw" }}
           animate={leftControls}
           transition={{ type: "spring", stiffness: 30 }}
-          className="m-4 p-8 text-white"
+          className="m-4"
         >
-          <div className="grid grid-rows-1 mt-10">
-            <div
-              className="flex h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-50 "
-              style={{ backgroundImage: "url('/gyapu.jpeg')" }}
-            >
-              <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-50 transition ease-in-out delay-200 hover:scale-100 duration-300">
-                Gyapu (E-commerce Application)
-              </p>
-            </div>
-          </div>
-        </motion.div>
-        <div className="grid grid-rows-1 mt-40">
-          <motion.div
-            initial={{ x: "100vw" }}
-            animate={rightControls} // Use the same leftControls for synchronized animation
-            transition={{ type: "spring", stiffness: 30 }}
-            className="m-4 p-8 bg-[#F0F8FF]text-white"
-          >
+          {projectDetails.map((values) => (
             <div className="grid grid-rows-1 mt-10">
               <div
-                className="flex h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-50 "
-                style={{ backgroundImage: "url('/kickandconnect.jpg')" }}
+                className="flex  h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                style={{
+                  backgroundImage: `url(${values.imageUrl})`,
+                  // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
+                  // backgroundBlendMode: "multiply", // Blends the color and image together
+                  backgroundPosition: "center",
+                  backgroundSize: "contain", // Ensures the image fits within the container
+                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                }}
               >
-                <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-50 transition ease-in-out delay-200 hover:scale-100 duration-300">
-                  Kick&Connect (Football Application)
+                <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-100 transition ease-in-out delay-0 hover:scale-100 duration-300">
+                  {values.title}
                 </p>
               </div>
             </div>
+          ))}
+        </motion.div>
+
+        <div className="grid grid-rows-1 mt-40">
+          <motion.div
+            initial={{ x: "100vw" }}
+            animate={leftControls} // Use the same leftControls for synchronized animation
+            transition={{ type: "spring", stiffness: 30 }}
+            className="m-4 p-8 bg-[#F0F8FF]text-white"
+          >
+            {projectDetailsSecond.map((values) => (
+              <div className="grid grid-rows-1 mt-10">
+                <div
+                  className="flex  h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                  style={{
+                    backgroundImage: `url(${values.imageUrl})`,
+                    // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
+                    // backgroundBlendMode: "multiply", // Blends the color and image together
+                    backgroundPosition: "center",
+                    backgroundSize: "contain", // Ensures the image fits within the container
+                    backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                  }}
+                >
+                  <p className="flex text-black text-3xl font-bold justify-center  items-end opacity-0 hover:opacity-100 transition ease-in-out delay-0 hover:scale-100 duration-300">
+                    {values.title}
+                  </p>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>
