@@ -18,31 +18,30 @@ export default function MobileApp({
   projectDetails: ProjectDetailsSchema[];
   projectDetailsSecond: ProjectDetailsSchema[];
 }) {
-  const leftControls = useAnimation();
-  const rightControls = useAnimation();
+  // const leftControls = useAnimation();
+  // const rightControls = useAnimation();
 
-  const { ref, inView } = useInView();
+  // const { ref, inView } = useInView();
 
-  useEffect(() => {
-    if (inView) {
-      // Element comes into view - animate to original position
-      leftControls.start({ x: 0 }); // Comes in from the left
-      rightControls.start({ x: 0 }); // Comes in from the right
-    } else {
-      // Element goes out of view - animate back to starting position
-      leftControls.start({ x: "-100vw" }); // Moves back out to the left
-      rightControls.start({ x: "100vw" }); // Moves back out to the right
-    }
-  }, [leftControls, inView, rightControls]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     // Element comes into view - animate to original position
+  //     leftControls.start({ x: 0 }); // Comes in from the left
+  //     rightControls.start({ x: 0 }); // Comes in from the right
+  //   } else {
+  //     // Element goes out of view - animate back to starting position
+  //     leftControls.start({ x: "-100vw" }); // Moves back out to the left
+  //     rightControls.start({ x: "100vw" }); // Moves back out to the right
+  //   }
+  // }, [leftControls, inView, rightControls]);
 
   return (
-    <div ref={ref} className="w-full mt-20">
+    <div className="w-full mt-20">
       <div className="grid grid-cols-2">
         <motion.div
-          initial={{ x: "-100vw" }}
-          animate={leftControls}
-          transition={{ type: "spring", stiffness: 30 }}
-          className="m-4"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           {projectDetails.map((values, index) => (
             <div key={values.id || index} className="grid grid-rows-1 mt-10">
@@ -67,13 +66,12 @@ export default function MobileApp({
 
         <div className="grid grid-rows-1 mt-40">
           <motion.div
-            initial={{ x: "100vw" }}
-            animate={leftControls} // Use the same leftControls for synchronized animation
-            transition={{ type: "spring", stiffness: 30 }}
-            className="m-4 p-8 bg-[#F0F8FF]text-white"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
           >
             {projectDetailsSecond.map((values, index) => (
-              <div key={values.id || index} className="grid grid-rows-1 mt-10" >
+              <div key={values.id || index} className="grid grid-rows-1 mt-10">
                 <div
                   className="h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
                   style={{

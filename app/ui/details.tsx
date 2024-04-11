@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import dynamic from "next/dynamic";
 
 export default function Details() {
   
