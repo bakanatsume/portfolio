@@ -45,8 +45,8 @@ export default function MobileApp({
           transition={{ duration: 1 }}
         >
           {projectDetails.map((values, index) => (
-            <a href={values.url}>
-              <div key={values.id || index} className="grid grid-rows-1 mt-10">
+            <div key={values.id || index} className="grid grid-rows-1 mt-10">
+              <a href={values.url}>
                 <div
                   className=" h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
                   style={{
@@ -62,8 +62,8 @@ export default function MobileApp({
                     {values.title}
                   </p>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           ))}
         </motion.div>
 
@@ -74,11 +74,8 @@ export default function MobileApp({
             transition={{ duration: 1 }}
           >
             {projectDetailsSecond.map((values, index) => (
-              <a href={values.url}>
-                <div
-                  key={values.id || index}
-                  className="grid grid-rows-1 mt-10"
-                >
+              <div key={values.id || index} className="grid grid-rows-1 mt-10">
+                <a href={values.url}>
                   <div
                     className="h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
                     style={{
@@ -94,8 +91,8 @@ export default function MobileApp({
                       {values.title}
                     </p>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             ))}
           </motion.div>
         </div>
