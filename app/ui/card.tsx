@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export interface ProjectCardProps {
@@ -40,7 +41,7 @@ export default function Card({
           <div>
             <p className="mt-10 text-justify">{projectDetails.description}</p>
           </div>
-          <div >
+          <Link href={projectDetails.url ?? "#"} passHref>
             <Image
               src={
                 projectDetails.imageUrl
@@ -52,7 +53,7 @@ export default function Card({
               height={100}
               className="mx-auto"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>

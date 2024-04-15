@@ -9,6 +9,7 @@ export interface ProjectDetailsSchema {
   title?: string;
   desc?: string;
   imageUrl?: string;
+  url?: string;
 }
 
 export default function MobileApp({
@@ -56,9 +57,11 @@ export default function MobileApp({
                   backgroundRepeat: "no-repeat", // Prevents the image from repeating
                 }}
               >
-                <p className=" font-bold text-center text-2xl">
-                  {values.title}
-                </p>
+                <a href={values.url}>
+                  <p className=" font-bold text-center text-2xl">
+                    {values.title}
+                  </p>
+                </a>
               </div>
             </div>
           ))}
@@ -83,9 +86,11 @@ export default function MobileApp({
                     backgroundRepeat: "no-repeat", // Prevents the image from repeating
                   }}
                 >
-                  <p className=" font-bold text-center text-2xl text-underline">
-                    {values.title}
-                  </p>
+                  <a href={values.url}>
+                    <p className=" font-bold text-center text-2xl">
+                      {values.title}
+                    </p>
+                  </a>
                 </div>
               </div>
             ))}
