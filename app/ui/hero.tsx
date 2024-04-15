@@ -67,7 +67,7 @@ export default function Hero() {
     );
   } else {
     return (
-      <div className="p-12 xl:p-0 grid grid-cols-2">
+      <div className="p-12 2xl:p-0 grid grid-cols-2">
         <div className="flex h-screen justify-center items-start flex-col space-y-2">
           <h1 className="sm:text-xm lg:text-xl">Hi, I am</h1>
           <h1 className="sm:text-2xl lg:text-6xl font-bold">Bipash Chhantyal</h1>
