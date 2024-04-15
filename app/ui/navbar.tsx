@@ -18,26 +18,23 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-
-    <>
-      <div className="w-2/6 right-16 border border-2 rounded-lg fixed top-10 bg-gray-100 z-10">
-        <div className="grid grid-cols-4 border border-2 rounded-lg h-16 shadow-lg justify-center place-items-center font-bold">
-          {links.map((navLink) => {
-            return (
-              <Link
-                key={navLink.name}
-                href={navLink.href}
-                className={clsx("cursor-none", {
-                  "flex justify-center items-center border border-gray-300 shadow-lg border-2 rounded-lg p-4 w-30 h-10":
-                    pathname === navLink.href,
-                })}
-              >
-                <p className="hidden md:block">{navLink.name}</p>
-              </Link>
-            );
-          })}
-        </div>
+    <div className=" w-4/5 md:w-1/2 lg:w-2/6 right-0 mr-16 border border-2 rounded-lg fixed top-10 bg-gray-100 z-10">
+      <div className="grid grid-cols-4 border border-2 rounded-lg h-16 shadow-lg justify-center place-items-center font-bold  md:text-sm xl:text-xl">
+        {links.map((navLink) => {
+          return (
+            <Link
+              key={navLink.name}
+              href={navLink.href}
+              className={clsx("cursor-none", {
+                " flex justify-center items-center border border-gray-300 shadow-lg border-2 rounded-lg p-4 w-30 h-10":
+                  pathname === navLink.href,
+              })}
+            >
+              <p className="">{navLink.name}</p>
+            </Link>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 }

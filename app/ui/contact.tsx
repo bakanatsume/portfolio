@@ -6,7 +6,7 @@ export default function Contact() {
   
 
   return (
-    <div  className="grid grid-cols-2 h-500 w-full  mt-10">
+    <div  className=" grid grid-cols-2 h-500 w-full  mt-10">
       <div></div>
       <motion.div
       initial={{ y: 100, opacity: 0 }}

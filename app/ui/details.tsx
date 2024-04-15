@@ -43,7 +43,7 @@ export default function Details() {
   }, []);
 
   return (
-    <div className="h-screen mt-20">
+    <div className="hidden lg:block h-screen mt-20">
       <div className="grid grid-cols-2 justify-center items-center mb-20">
         <div>
           <motion.div
@@ -52,7 +52,7 @@ export default function Details() {
             transition={{ duration: 1 }}
             className="h-screen"
           >
-            <div className="relative flex items-center justify-center h-[400]">
+            <div className=" relative flex items-center justify-center h-[400]">
               <div
                 id="lottie-animation"
                 className="absolute top-0 left-0 h-full w-full z-10"

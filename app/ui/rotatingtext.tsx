@@ -3,7 +3,7 @@ import RotatedText from './rotatedtext'
 
 export default function RotatingText() {
   return (
-    <div className='flex justify-center items-center h-96'>
+    <div className='hidden md:block flex justify-center items-center h-96'>
 
     <div className='flex relative  w-[400px] h-[400px] bg-gray-100 rounded-full justify-center items-center' style={{backgroundImage: "url('/doo.gif')", backgroundSize: "cover",backgroundPosition: 'center'}}>
         <div className='absolute w-[400px] h-[400px] rounded-full'>

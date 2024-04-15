@@ -36,7 +36,7 @@ export default function Card({
       <div className="p-6">
         <h1 className="text-3xl font-bold ">{projectDetails.title}</h1>
         <h3>{projectDetails.summary}</h3>
-        <div className="grid grid-cols-2 grid-flow-col ">
+        <div className="md:grid md:grid-cols-2 grid-flow-col ">
           <div>
             <p className="mt-10 text-justify">{projectDetails.description}</p>
           </div>

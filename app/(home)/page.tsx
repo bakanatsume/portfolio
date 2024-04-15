@@ -54,7 +54,7 @@ export default function page() {
     url: "/",
   };
   return (
-    <>
+    <div>
       <Hero />
       <div className="flex flex-col space-y-5 relative">
         {/* title,short description, description, image url */}
@@ -63,12 +63,12 @@ export default function page() {
         <Card topGap={32} projectDetails={thirdProject} />
       </div>
       <DynamicHeader />
-      <h1 className="text-3xl font-bold ">Featured Projects</h1>
+      <h1 className="text-xl lg:text-3xl font-bold ">Featured Projects</h1>
       <MobileApp
         projectDetails={projectDetails}
         projectDetailsSecond={projectDetailsSecond}
       />
       <Contact />
-    </>
+    </div>
   );
 }
