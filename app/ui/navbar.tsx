@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <div className=" w-4/5 md:w-1/2 lg:w-2/6 right-0 mr-16 border border-2 rounded-lg fixed top-10 bg-gray-100 z-10">
-      <div className="grid grid-cols-4 border border-2 rounded-lg h-16 shadow-lg justify-center place-items-center font-bold text-xs  md:text-sm xl:text-xl">
+      <div className="grid grid-cols-4 border border-2 rounded-lg h-16 shadow-lg justify-center place-items-center font-bold text-xs  md:text-sm xl:text-lg">
         {links.map((navLink) => {
           return (
             <Link
