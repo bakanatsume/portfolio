@@ -45,25 +45,25 @@ export default function MobileApp({
           transition={{ duration: 1 }}
         >
           {projectDetails.map((values, index) => (
-            <div key={values.id || index} className="grid grid-rows-1 mt-10">
-              <div
-                className=" h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
-                style={{
-                  backgroundImage: `url(${values.imageUrl})`,
-                  // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
-                  // backgroundBlendMode: "multiply", // Blends the color and image together
-                  // backgroundPosition: "center",
-                  backgroundSize: "contain", // Ensures the image fits within the container
-                  backgroundRepeat: "no-repeat", // Prevents the image from repeating
-                }}
-              >
-                <a href={values.url}>
+            <a href={values.url}>
+              <div key={values.id || index} className="grid grid-rows-1 mt-10">
+                <div
+                  className=" h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                  style={{
+                    backgroundImage: `url(${values.imageUrl})`,
+                    // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
+                    // backgroundBlendMode: "multiply", // Blends the color and image together
+                    // backgroundPosition: "center",
+                    backgroundSize: "contain", // Ensures the image fits within the container
+                    backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                  }}
+                >
                   <p className=" font-bold text-center text-2xl">
                     {values.title}
                   </p>
-                </a>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </motion.div>
 
@@ -74,25 +74,28 @@ export default function MobileApp({
             transition={{ duration: 1 }}
           >
             {projectDetailsSecond.map((values, index) => (
-              <div key={values.id || index} className="grid grid-rows-1 mt-10">
+              <a href={values.url}>
                 <div
-                  className="h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
-                  style={{
-                    backgroundImage: `url(${values.imageUrl})`,
-                    // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
-                    // backgroundBlendMode: "multiply", // Blends the color and image together
-                    // backgroundPosition: "center",
-                    backgroundSize: "contain", // Ensures the image fits within the container
-                    backgroundRepeat: "no-repeat", // Prevents the image from repeating
-                  }}
+                  key={values.id || index}
+                  className="grid grid-rows-1 mt-10"
                 >
-                  <a href={values.url}>
+                  <div
+                    className="h-screen p-2 bg-cover w-4/5  hover:cursor-pointer hover:opacity-80 "
+                    style={{
+                      backgroundImage: `url(${values.imageUrl})`,
+                      // backgroundColor: "rgba(128, 128, 128, 1)", // Example: white background with 50% opacity
+                      // backgroundBlendMode: "multiply", // Blends the color and image together
+                      // backgroundPosition: "center",
+                      backgroundSize: "contain", // Ensures the image fits within the container
+                      backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                    }}
+                  >
                     <p className=" font-bold text-center text-2xl">
                       {values.title}
                     </p>
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </motion.div>
         </div>
