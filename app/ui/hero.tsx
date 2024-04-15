@@ -5,6 +5,7 @@ import React from "react";
 import splitusingregex from "./splitusingregex";
 import { motion } from "framer-motion";
 import RotatingText from "./rotatingtext";
+import Link from "next/link";
 
 export default function Hero() {
   const designanddeploy = "Design, Develop and Deploy";
@@ -70,7 +71,9 @@ export default function Hero() {
       <div className="p-12 2xl:p-0 grid grid-cols-2">
         <div className="flex h-screen justify-center items-start flex-col space-y-2">
           <h1 className="sm:text-xm lg:text-xl">Hi, I am</h1>
-          <h1 className="sm:text-2xl lg:text-6xl font-bold">Bipash Chhantyal</h1>
+          <h1 className="sm:text-2xl lg:text-6xl font-bold">
+            Bipash Chhantyal
+          </h1>
           <motion.h1
             initial="hidden"
             whileInView="reveal"
@@ -89,17 +92,18 @@ export default function Hero() {
           </motion.h1>
           <div className="h-10"></div>
           <div className="flex space-x-4">
-            <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24 lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
-              Resume
-            </div>
+            <a href="/cv.pdf" download="resume">
+              <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24 lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
+                Resume
+              </div>
+            </a>
             <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24  lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
               Contact
             </div>
           </div>
         </div>
         <div className="flex justify-center items-center">
-
-        <RotatingText/>
+          <RotatingText />
         </div>
       </div>
     );
