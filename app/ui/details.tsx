@@ -20,7 +20,7 @@ export default function Details() {
           renderer: "svg",
           loop: true,
           autoplay: true,
-          path: "/blob.json", 
+          path: "./blob.json", 
           rendererSettings: {
             preserveAspectRatio: "xMidYMid slice",
           },
@@ -59,7 +59,7 @@ export default function Details() {
                 ref={animationContainer}
               ></div>
               <Image
-                src="/profile.png"
+                src="./profile.png"
                 alt="project screen"
                 width={500}
                 height={400}
@@ -94,7 +94,7 @@ export default function Details() {
               <div className="ml-3 mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/javascript.png"}
+                    src={"./icons/javascript.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -107,7 +107,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/react.png"}
+                    src={"./icons/react.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -118,7 +118,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/nodejs.png"}
+                    src={"./icons/nodejs.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -129,7 +129,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/flutter.png"}
+                    src={"./icons/flutter.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -140,7 +140,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/sql.png"}
+                    src={"./icons/sql.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -151,7 +151,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/mongodb.png"}
+                    src={"./icons/mongodb.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -162,7 +162,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/tailwind.png"}
+                    src={"./icons/tailwind.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -174,7 +174,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/python.png"}
+                    src={"./icons/python.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -185,7 +185,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/bootstrap.png"}
+                    src={"./icons/bootstrap.png"}
                     height={30}
                     width={30}
                     alt="javascript icon"
@@ -196,7 +196,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/numpy.png"}
+                    src={"./icons/numpy.png"}
                     height={30}
                     width={30}
                     alt="Numpy icon"
@@ -207,7 +207,7 @@ export default function Details() {
               <div className=" mt-3 flex border border-4 border-white rounded-3xl w-40 h-16 justify-center items-center shadow-xl font-bold text-semi">
                 <div className="mr-2">
                   <Image
-                    src={"/icons/pandas.png"}
+                    src={"./icons/pandas.png"}
                     height={30}
                     width={30}
                     alt="Pandas icon"
