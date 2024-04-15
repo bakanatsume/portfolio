@@ -1,29 +1,32 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 import React from "react";
 export default function Contact() {
-  
-
   return (
-    <div  className=" grid grid-cols-2 h-500 w-full  mt-10">
+    <div className=" grid grid-cols-2 h-500 w-full  mt-10">
       <div></div>
       <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="h-screen"
-    >
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="h-screen"
+      >
         <div className="mt-10">
           <h1 className="text-5xl font-bold">Leave a Message</h1>
-          <form className="mt-10 ">
+          <form
+            className="mt-10 "
+            action="https://formspree.io/f/myyrbqnr"
+            method="POST"
+          >
             <div className="mb-4">
-              <label className="block mb-2">Name</label>
+              <label className="block mb-2">Full Name</label>
               <input
                 className="w-full h-16 px-3 py-2 border rounded-md shadow-inner shadow-2xl"
                 type="text"
-                id="firstname"
-                placeholder="Firstname"
+                id="fullname"
+                name="fullname"
+                placeholder="fullname"
               />
             </div>
 
@@ -32,8 +35,9 @@ export default function Contact() {
               <input
                 className="w-full h-16 px-3 py-2 border rounded-md shadow-inner "
                 type="text"
-                id="lastname"
-                placeholder="Lastname"
+                id="phone"
+                name="phone"
+                placeholder="phone"
               />
             </div>
 
@@ -43,15 +47,17 @@ export default function Contact() {
                 className="w-full h-16 px-3 py-2 border rounded-md shadow-inner "
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Email"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block mb-2">Query</label>
+              <label className="block mb-2">Query</label> 
               <textarea
                 className="w-full h-24 px-3 py-2 border rounded-md shadow-inner "
                 id="query"
+                name="query"
                 placeholder="Query"
               ></textarea>
             </div>
