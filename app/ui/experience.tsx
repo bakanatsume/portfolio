@@ -9,7 +9,7 @@ export default function Experience() {
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 2 }}
-      className="h-screen"
+      className="h-screen p-16"
     >
       <h1 className="font-bold text-5xl">Experience</h1>
 
