@@ -19,14 +19,15 @@ export default function page() {
       title: "Schoolworkspro",
       desc: "E-Learning Platform",
       imageUrl: "/schoolworksproapp.png",
+      url:'/'
     },
   ];
   const projectDetailsSecond = [
     {
       id:1,
-      title: "Schoolworkspro",
-      desc: "E-Learning Platform designed for schools,college and universities",
-      imageUrl: "/schoolworkspro.png",
+      title: "Gyapu Marketplace",
+      desc: "E-Commerce pLatform",
+      imageUrl: "/gyapuapp.png",
     },
   ];
   const firstProject = {
@@ -63,11 +64,11 @@ export default function page() {
         <Card topGap={32} projectDetails={thirdProject} />
       </div>
       <DynamicHeader />
-      <h1 className="text-xl lg:text-3xl font-bold ">Featured Projects</h1>
+      <h1 className="text-xl lg:text-3xl font-bold ">Mobile Application</h1>
       <MobileApp
         projectDetails={projectDetails}
         projectDetailsSecond={projectDetailsSecond}
-      />
+      />  
       <Contact />
     </div>
   );

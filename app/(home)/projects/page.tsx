@@ -15,7 +15,7 @@ export default function page() {
     },
     {
       id:2,
-      title: "Kick&Connect",
+      title: "Kick&Connect (soon)",
       desc: "Kick&Connect",
       imageUrl: "kickandconnectapp.png",
     },
@@ -24,6 +24,12 @@ export default function page() {
       title: "SchoolWorksPro",
       desc: "E-Learning Platform",
       imageUrl: "/schoolworksproapp.png",
+    },
+    {
+      id:4,
+      title: "KangenWater (soon)",
+      desc: "Smart Drinking Water Facility",
+      imageUrl: "/kangenwater.png",
     },
   ];
   const projectDetailsSecond = [
@@ -44,6 +50,12 @@ export default function page() {
       title: "Digimedical",
       desc: "Booking system for doctors and medical facilities.",
       imageUrl: "/digimedical.png",
+    },
+    {
+      id:4,
+      title: "Authentifactor (soon)",
+      desc: "Work Validation and Automation",
+      imageUrl: "/authentifactor.png",
     },
   ];
   return (
