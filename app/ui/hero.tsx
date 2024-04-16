@@ -237,9 +237,60 @@ export default function Hero() {
   } else if (path === "/projects") {
     // Placeholder for projects content
     return (
-      <div>
-        <div className="flex h-screen justify-center items-start flex-col space-y-2 items-center">
-          <h1 className="text-6xl font-bold">Projects</h1>
+      <div className="h-screen  md:grid md:grid-cols-2 items-center justify-center">
+        <div className="grid cols-rows-3 space-y-4">
+          <div className="liquid-effect-mobileapp h-40 border-double border-4 rounded-xl w-full bg-no-repeat bg-cover flex justify-center items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="h-8 w-8 text-white mr-2"
+            >
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12" y2="18"></line>
+            </svg>
+            <p className="text-white font-bold lg:text-2xl">
+              MOBILE APPLICATION
+            </p>
+          </div>
+
+          <div className="liquid-effect-web border-double border-4 rounded-xl h-40 w-full bg-no-repeat bg-cover flex justify-center items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="h-8 w-8 text-white mr-2"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="3" x2="9" y2="9"></line>
+            </svg>
+            <p className="text-white font-bold lg:text-2xl">WEB APPLICATION</p>
+          </div>
+          <div className="liquid-effect-iot border-double border-4 rounded-xl h-40 w-full bg-no-repeat bg-cover flex justify-center items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-8 w-8 text-white mr-2"
+            >
+              <path d="M12,2A10,10,0,1,0,22,12,10.012,10.012,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,12,20Z"></path>
+              <path d="M13,7H11v6h2Z"></path>
+              <path d="M13,15H11v2h2Z"></path>
+            </svg>
+            <p className="text-white font-bold lg:text-2xl">IOT APPLICATION</p>
+          </div>
+        </div>
+        <div className="grid grid-rows-2 justify-center items-center">
+          <h1 className="text-6xl font-bold text-center">Projects</h1>
           <motion.h1
             initial="hidden"
             whileInView="reveal"

@@ -44,3 +44,33 @@ body {
 
 .blob:nth-child(2) {
   filter: blur(50px);}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.liquid-effect-mobileapp {
+  background: linear-gradient(270deg, #00d4ff, #090979, #00d4ff, #090979);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.liquid-effect-web {
+  background: linear-gradient(270deg, #8A2BE2, #FFC0CB, #8A2BE2, #FFC0CB);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.liquid-effect-iot {
+  background: linear-gradient(270deg, #EE82EE, #FF69B4, #EE82EE, #FF69B4);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}

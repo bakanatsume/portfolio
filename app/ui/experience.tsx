@@ -15,7 +15,7 @@ export default function Experience() {
 
       <div className="mt-40 w-2/3">
         <div>
-          <h1 className="flex space justify-between ">
+          <h1 className="flex hidden md:block md:space justify-between ">
             <span className="font-bold text-3xl">React Developer</span>{" "}
             <span className="font-semi text-xl">Jan 2024-Present</span>
           </h1>
