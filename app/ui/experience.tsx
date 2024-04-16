@@ -9,13 +9,13 @@ export default function Experience() {
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 2 }}
-      className="h-screen"
+      className="h-screen p-16"
     >
       <h1 className="font-bold text-5xl">Experience</h1>
 
       <div className="mt-40 w-2/3">
         <div>
-          <h1 className="flex space justify-between ">
+          <h1 className="flex hidden md:block md:space justify-between ">
             <span className="font-bold text-3xl">React Developer</span>{" "}
             <span className="font-semi text-xl">Jan 2024-Present</span>
           </h1>
