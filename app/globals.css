@@ -58,19 +58,19 @@ body {
 }
 
 .liquid-effect-mobileapp {
-  background: linear-gradient(270deg, #00d4ff, #090979, #00d4ff, #090979);
+  background: linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite;
 }
 
 .liquid-effect-web {
-  background: linear-gradient(270deg, #8A2BE2, #FFC0CB, #8A2BE2, #FFC0CB);
+  background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite;
 }
 
 .liquid-effect-iot {
-  background: linear-gradient(270deg, #EE82EE, #FF69B4, #EE82EE, #FF69B4);
+  background: linear-gradient(90deg, hsla(120, 6%, 90%, 1) 0%, hsla(228, 75%, 16%, 1) 100%);
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite;
 }
