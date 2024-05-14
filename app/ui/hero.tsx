@@ -6,6 +6,7 @@ import splitusingregex from "./splitusingregex";
 import { motion } from "framer-motion";
 import RotatingText from "./rotatingtext";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const designanddeploy = "Design, Develop and Deploy";
@@ -352,9 +353,11 @@ export default function Hero() {
                 Resume
               </div>
             </a>
-            <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24  lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
-              Contact
-            </div>
+            <a href="/contact">
+              <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24  lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
+                Contact
+              </div>
+            </a>
           </div>
         </div>
         <div className="flex justify-center items-center">
