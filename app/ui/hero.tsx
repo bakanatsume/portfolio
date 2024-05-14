@@ -348,7 +348,7 @@ export default function Hero() {
           </motion.h1>
           <div className="h-10"></div>
           <div className="flex space-x-4">
-            <a href="https://bakanatsume.github.io/portfolio//my.pdf" target="_blank">
+            <a href="https://bakanatsume.github.io/portfolio//cv.pdf" target="_blank">
               <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24 lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
                 Resume
               </div>
