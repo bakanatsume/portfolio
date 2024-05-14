@@ -348,11 +348,11 @@ export default function Hero() {
           </motion.h1>
           <div className="h-10"></div>
           <div className="flex space-x-4">
-            <Link href="/cv.pdf" download="resume">
+            <a href="/cv.pdf" download="resume">
               <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24 lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
                 Resume
               </div>
-            </Link>
+            </a>
             <Link href="/contact">
               <div className="flex border border-4 rounded-3xl w-[100px]  md:w-24  lg:w-36 lg:h-16 justify-center items-center shadow-xl font-bold lg:text-xl">
                 Contact
